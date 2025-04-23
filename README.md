@@ -85,11 +85,10 @@ If an error occurs, the error field will be set to "true"
 ```
 ## Improvements / Notes
 
-There code handling the calculation for users_with_most_friends is incorrect. 
-
+The code handling the calculation for users_with_most_friends is possibly incorrect and needs checking. The total sometimes seems too high, e.g. in the example above "users_with_most_friends": 1948
 A few more test cases could have highlighted this.
 
-This was developed in wsl on windows. In hindsight, I would have used a full Ubuntu image or spent more time setting up wsl - it was slow!
+This was developed in wsl on windows. In hindsight, I would have used a full Ubuntu image or spent more time setting up wsl - it was slow! I think my Pi would have been quicker.
 
 I have only used Cursor briefly before now. It frequently deleted previous changes and go muddled up. A more incremental approach would have worked better and/or upgrading to a paid version.
 
@@ -105,5 +104,3 @@ No security is implemented in the current solution. Given more time I would recc
 - **Environment Secrets**: Move sensitive config (e.g., API keys, DB credentials) to environment variables and out of version control.
 - **Error Handling**: Improve error responses to avoid leaking internal stack traces or server details.
 - **Security Headers**: Add common HTTP headers like `Content-Security-Policy` and `X-Frame-Options`.
-
-> ⚠️ **Note**: This is an early-stage/testing project and should not be used in a production environment without proper security hardening.
